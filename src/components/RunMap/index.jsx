@@ -16,7 +16,6 @@ import RunMarker from './RunMaker';
 import RunMapButtons from './RunMapButtons';
 import styles from './style.module.scss';
 
-//change 'dispaly' to 'hide' if you want to hide the road label
 const RoadLabelDisplay = 'display'
 const layerList=['road-label',  'waterway-label',  'natural-line-label',  'natural-point-label',  'water-line-label',  'water-point-label',  'poi-label',  'airport-label',  'settlement-subdivision-label',  'settlement-label',  'state-label',  'country-label'];
 
