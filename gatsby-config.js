@@ -1,5 +1,5 @@
 module.exports = {
-  pathPrefix: '/running_page', // Change to `/running_page` when running on github pages
+  pathPrefix: process.env.PATH_PREFIX || '/',
   siteMetadata: {
     siteTitle: 'Zzz的跑步生涯',
     siteUrl: 'https://lingdeyiyicifang.github.io/running_page/',
