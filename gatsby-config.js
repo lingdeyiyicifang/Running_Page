@@ -1,14 +1,14 @@
 module.exports = {
-  pathPrefix: '/', // Change to `/running_page` when running on github pages
+  pathPrefix: '/running_page', // Change to `/running_page` when running on github pages
   siteMetadata: {
-    siteTitle: 'Running Page',
-    siteUrl: 'https://yihong.run',
-    logo: 'https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcQTtc69JxHNcmN1ETpMUX4dozAgAN6iPjWalQ&usqp=CAU',
+    siteTitle: 'Zzz的跑步生涯',
+    siteUrl: 'https://lingdeyiyicifang.github.io/running_page/',
+    logo: 'https://s2.loli.net/2022/12/15/fa8SYPR4WOy1bEQ.jpg',
     description: 'Personal site and blog',
     navLinks: [
       {
         name: 'Blog',
-        url: 'https://yihong.run/running',
+        url: 'https://lingdeyiyicifang.github.io/running_page/',
       },
       {
         name: 'About',
@@ -23,13 +23,6 @@ module.exports = {
       resolve: 'gatsby-source-filesystem',
       options: {
         path: './src/static/',
-      },
-    },
-    {
-      resolve: "gatsby-plugin-vercel",
-      options: {
-        // (optional) Prints metrics in the console when true
-        debug: false,
       },
     },
     {
