@@ -21,7 +21,8 @@ const USE_DASH_LINE = true;
 const LINE_OPACITY = 0.4;
 // styling: map height
 const MAP_HEIGHT = 600;
-const ROAD_LABEL_DISPLAY = false;
+//set to `false` if you want to hide the road label character
+const ROAD_LABEL_DISPLAY = true;
 
 // IF you outside China please make sure IS_CHINESE = false
 const IS_CHINESE = true;
