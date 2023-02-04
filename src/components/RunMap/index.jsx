@@ -3,7 +3,9 @@ import React, { useRef, useCallback } from 'react';
 import ReactMapGL, { Layer, Source, FullscreenControl } from 'react-map-gl';
 import useActivities from 'src/hooks/useActivities';
 import {
+  MAP_LAYER_LIST,
   IS_CHINESE,
+  ROAD_LABEL_DISPLAY,
   MAIN_COLOR,
   MAPBOX_TOKEN,
   PROVINCE_FILL_COLOR,
@@ -15,10 +17,6 @@ import { geoJsonForMap } from 'src/utils/utils';
 import RunMarker from './RunMaker';
 import RunMapButtons from './RunMapButtons';
 import styles from './style.module.scss';
-
-//change 'dispaly' to 'hide' if you want to hide the road labels;
-const RoadLabelDisplay = 'hide';
-const layerList=['road-label',  'waterway-label',  'natural-line-label',  'natural-point-label',  'water-line-label',  'water-point-label',  'poi-label',  'airport-label',  'settlement-subdivision-label',  'settlement-label',  'state-label',  'country-label'];
 
 const RunMap = ({
   title,
@@ -38,14 +36,11 @@ const RunMap = ({
         const map = ref.getMap();
         if (map && IS_CHINESE) {
           map.addControl(new MapboxLanguage({ defaultLanguage: 'zh-Hans' }));
-          if (RoadLabelDisplay == 'hide') { 
+          if (!ROAD_LABEL_DISPLAY) { 
           // todo delete layers
           map.on('load', () => {
-            for(let layerId of layerList){
-              map.removeLayer(layerId);
-            }
+              MAP_LAYER_LIST.forEach((layerId) => {map.removeLayer(layerId)})
           })};
-
         }
       }
     },
